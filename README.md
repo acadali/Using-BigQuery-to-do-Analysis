@@ -7,7 +7,7 @@ The purpose of accessing the public dataset is that you don&#39;t have to downlo
 # Lets Start!
 
 First log in to GCP platform, and from the navigation side menu, select BigQuery and pinned it too.
-<p></p>
+
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/1.png
 )
 
