@@ -10,20 +10,27 @@ First log in to GCP platform, and from the navigation side menu, select BigQuery
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/1.png
 )
 
+
 After clicking BigQuery, click &quot;Add Data&quot; and explore public data.
+
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/2.png
 )
 
+
 After selecting any public data, click &quot;View Dataset&quot;. In this case I have selected &#39;nyc bike&#39;.
+
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/3.png
 )
 
+
 This dataset will be loaded to your console. You can preview the data and also the schema of that dataset as well.
+
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/4.png
 )
+
 
 Paste the following in the Query editor textbox.
 
@@ -41,8 +48,10 @@ Paste the following in the Query editor textbox.
 
 Click Run. This will return the typical duration for the 10 most common rentals.
 
+
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/5.png
 )
+
 
 Next, now paste the following query, it will show the total distance travelled by each bicycle only top 5.
 
@@ -55,27 +64,28 @@ Next, now paste the following query, it will show the total distance travelled b
     ST_GeogPoint(e.longitude,
       e.latitude)) AS distance
     FROM
-  `bigquery-public-data.new_york_citibike.citibike_trips`,
-  `bigquery-public-data.new_york_citibike.citibike_stations`  as s,
-  `bigquery-public-data.new_york_citibike.citibike_stations` as e
+    `bigquery-public-data.new_york_citibike.citibike_trips`,
+    `bigquery-public-data.new_york_citibike.citibike_stations`  as s,
+    `bigquery-public-data.new_york_citibike.citibike_stations` as e
     `WHERE
         start_station_id = s.station_id
-  AND end_station_id = e.station_id )
-SELECT
-  bikeid,
-  SUM(distance)/1000 AS total_distance
-FROM
-  trip_distance
-GROUP BY
-  bikeid
-ORDER BY
-  total_distance DESC
-LIMIT
-  5`
+     AND end_station_id = e.station_id )
+    SELECT
+    bikeid,
+     SUM(distance)/1000 AS total_distance
+    FROM
+     trip_distance
+    GROUP BY
+    bikeid
+    ORDER BY
+     total_distance DESC
+    LIMIT
+     5`
 
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/6.png
 )
+
 
 # **Explore the weather dataset**
 
@@ -97,14 +107,19 @@ Click COMPOSE NEW QUERY and enter the following:
     ORDER BY
     wx.date
 
+
 This will return rainfall (in mm) for all days in 2015.
+
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/7.png
 )
 
+
 Find Relation between bicycle and rain datasets.
 
+
 We can join these datasets to identify the bicycle rental on rainy days is few or not.
+
 
 Click  **COMPOSE NEW QUERY**  and run the following query :
 
@@ -150,6 +165,7 @@ In the second part, we are getting the data of the rainy day according to the da
 In the last part, we are joining the first two results on the basis of dates to identify that the bicycles was rented more on rainy days or not.
 
 In the result, num of trips shows the answer.
+
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/8.png
 )
