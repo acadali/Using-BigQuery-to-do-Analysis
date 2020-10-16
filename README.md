@@ -10,9 +10,9 @@ First log in to GCP platform, and from the navigation side menu, select BigQuery
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/1.png
 )
 
-
+<p></p>
 After clicking BigQuery, click &quot;Add Data&quot; and explore public data.
-
+<p></p>
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/2.png
 )
