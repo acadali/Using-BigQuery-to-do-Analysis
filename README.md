@@ -11,29 +11,27 @@ First log in to GCP platform, and from the navigation side menu, select BigQuery
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/1.png
 )
 
-<p></p>
-After clicking BigQuery, click &quot;Add Data&quot; and explore public data.
-<p></p>
+**After clicking BigQuery, click &quot;Add Data&quot; and explore public data.
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/2.png
 )
 
 
-After selecting any public data, click &quot;View Dataset&quot;. In this case I have selected &#39;nyc bike&#39;.
+**After selecting any public data, click &quot;View Dataset&quot;. In this case I have selected &#39;nyc bike&#39;.
 
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/3.png
 )
 
 
-This dataset will be loaded to your console. You can preview the data and also the schema of that dataset as well.
+**This dataset will be loaded to your console. You can preview the data and also the schema of that dataset as well.
 
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/4.png
 )
 
 
-Paste the following in the Query editor textbox.
+**Paste the following in the Query editor textbox.
 
     SELECT 
     MIN(start_station_name) AS start_station_name, 
@@ -47,14 +45,14 @@ Paste the following in the Query editor textbox.
     LIMIT 10
 
 
-Click Run. This will return the typical duration for the 10 most common rentals.
+**Click Run. This will return the typical duration for the 10 most common rentals.
 
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/5.png
 )
 
 
-Next, now paste the following query, it will show the total distance travelled by each bicycle only top 5.
+**Next, now paste the following query, it will show the total distance travelled by each bicycle only top 5.
 
     WITH
     trip_distance AS (
@@ -94,7 +92,7 @@ In the left pane of the BigQuery Console, Select added bigquery-public-data proj
 
 Examine the columns and some of the data values.
 
-Click COMPOSE NEW QUERY and enter the following:
+**Click COMPOSE NEW QUERY and enter the following:
 
     SELECT
     wx.date,
@@ -109,7 +107,7 @@ Click COMPOSE NEW QUERY and enter the following:
     wx.date
 
 
-This will return rainfall (in mm) for all days in 2015.
+**This will return rainfall (in mm) for all days in 2015.
 
 
 ![Test Image 4]( https://github.com/acadali/Using-BigQuery-to-do-Analysis/blob/main/7.png
